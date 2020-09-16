@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerlayoutMHChinh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.Toolbar
+                app:titleTextColor="#ffff"
+                android:id="@+id/toolbarManHinhChinh"
+                android:background="#3F51B5"
+                app:title="Trang chủ"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </androidx.appcompat.widget.Toolbar>
+            <ViewFlipper
+                android:id="@+id/viewflipperManHinhChinh"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"></ViewFlipper>
+            <LinearLayout
+                android:background="#2196F3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:text="Sản phẩm mới nhất"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewManHinhChinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationviewManHinhChinh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="10"
+                xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/ivTrangchu"
+                        android:src="@drawable/trangchu"
+                        android:layout_margin="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"></ImageView>
+                    <ImageView
+                        android:id="@+id/ivDienthoai"
+                        android:src="@drawable/phoneicon"
+                        android:layout_margin="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"></ImageView>
+                    <ImageView
+                        android:id="@+id/ivLaptop"
+                        android:src="@drawable/laptopicon"
+                        android:layout_margin="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"></ImageView>
+                    <ImageView
+                        android:id="@+id/ivLienhe"
+                        android:src="@drawable/lienheicon"
+                        android:layout_margin="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"></ImageView>
+                    <ImageView
+                        android:id="@+id/ivThongtin"
+                        android:src="@drawable/thongtinicon"
+                        android:layout_margin="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"></ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#FF0000"
+                        android:textSize="25sp"
+                        android:text="Trang chủ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"></TextView>
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:textColor="#FF0000"
+                        android:textSize="25sp"
+                        android:text="Điện thoại"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"></TextView>
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:textColor="#FF0000"
+                        android:textSize="25sp"
+                        android:text="Laptop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"></TextView>
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:textColor="#FF0000"
+                        android:textSize="25sp"
+                        android:text="Liên hệ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"></TextView>
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:textColor="#FF0000"
+                        android:textSize="25sp"
+                        android:text="Thông tin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>
